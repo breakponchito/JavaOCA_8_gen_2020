@@ -4,17 +4,17 @@ Este repositorio fue creado para almacenar las prácticas que se van a realizar 
 Sigue las instrucciones para poder incluir tu código para revisión:
 
 - Crear cuenta de [github](https://github.com/) en la versión pública
-- Nota: Si no tienes git en tu maquina primero debes descargarlo de la siguiente pagina [download git](https://git-scm.com/downloads ) y seguir las instrucciones para su instalación
+- Si no tienes git en tu maquina primero debes descargarlo de la siguiente pagina [download git](https://git-scm.com/downloads ) y seguir las instrucciones para su instalación
 - Esperar solicitud de colaboración y aceptar: Este punto yo lo voy a realizar: **alfonso.valdezaltamirano@gmail.com**
 - Clona el repositorio en una ubicación local en tu equipo
   - `git clone https://github.com/breakponchito/JavaOCA_8_gen_2020.git`
 - Abre git y ubicate en la carpeta raíz del repositorio. Yo tengo:
-  -java
-   -courses
-    -certificatic
-      -javaOCA_Jun2020
-        -sourceProject
-          -JavaOCA_8_gen_2020
+  - java
+  	- courses
+	  - certificatic
+	    - javaOCA_Jun2020
+	      - sourceProject
+	        - JavaOCA_8_gen_2020
 - En esta ubicación es donde ejecutaremos los comandos git
 - Abre el proyecto en Netbeans con la opción de abrir proyecto
 - Localiza el paquete que te corresponde: Para cada usuario fue generado un paquete con la correspondencia a su correo electrónico. A continuación indico los usuarios creados:
@@ -24,14 +24,14 @@ Sigue las instrucciones para poder incluir tu código para revisión:
   4. Paquete: devjuangofett para `juangofett@gmail.com`
   5. Paquete: devdanielgom91 para `daniel.gom.91@outlook.com`
 - Descarga la práctica del módulo desde la siguiente liga: [drive](https://drive.google.com/drive/folders/1nvJ7ZXBFovhsj7V8be_aiQRm37mlfhrG?usp=sharing)
-- Cada práctica da la instrucción de generar siempre un nuevo proyecto netbeans, en vez de eso vamos a ir agregando nuevos paquetes sobre la estructura de este proyecto
+- Cada práctica da la instrucción de generar siempre un nuevo proyecto netbeans, en vez de eso vamos a ir agregando nuevos paquetes sobre la estructura de este proyecto y el source code que generemos
 - Dentro del paquete creado de tu usuario, crear la carpeta del modulo que corresponda. Ejemplo:
   - deveduardoramirez
-    -module6
-      -practice1
-        -agrega aqui el código fuente de tu práctica
-      -practice2
-        -agrega aqui el código fuente de tu práctica
+    - module6
+      - practice1
+        - agrega aqui el código fuente de tu práctica
+      - practice2
+        - agrega aqui el código fuente de tu práctica
 - Puedes incluir tus cambios en cualquier momento
 - Para consultar los cambios realizado utilizar el comando `git status` en caso de tener dudas consultar la siguiente [liga](https://git-scm.com/docs/git-status)
 - crear un branch con el siguiente comando `git checkout -b nameofbranch` , si tienes dudas de como crear un branch consulta la siguiente [liga](https://git-scm.com/docs/git-checkout)
@@ -39,7 +39,7 @@ Sigue las instrucciones para poder incluir tu código para revisión:
 
 - Cuando todos los cambios esten en stage entonces es momento de crear un commit con el siguiente comando `git commit -m "message"` , este comando utiliza la opción -m para que podamos agregar un mensaje descriptivo del cambio que queremos publicar
 
-- Ahora vamos a enviar los cambios al repositorio remoto con el comando `git push --set-upstream origin branchname` , en donde branchname es el nombre del branch que genere previamente y en donde estan mis cambios
+- Ahora vamos a enviar los cambios al repositorio remoto con el comando `git push --set-upstream origin branchname` , en donde branchname es el nombre del branch que genere previamente y en donde estan mis cambios. Nota: en caso de que sobre el mismo branch se realicen varios push solo en el primer push es requerido utilizar --set-upstream ya que con esa opcion tu branch local se copia al remoto y para posteriores no es necesario
 	 
 - Cuando tengamos este avance ahora vamos a generar un pull request desde la interfaz web de github, por lo que debemos logearnos en nuestra cuenta y entrar al repositorio del proyecto
 
