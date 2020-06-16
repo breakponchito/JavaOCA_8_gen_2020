@@ -7,8 +7,12 @@ package com.cert.oca8.course.devdamunguia95.module6.practice1;
 
 /**
  *
- * @author alfonso.valdez
+ * @author dmunguias
  */
-public class MainTest {
-    
+public class Goal {
+
+    public String playerName;
+    public int numOfPlayer;
+    public String teamName;
+
 }
