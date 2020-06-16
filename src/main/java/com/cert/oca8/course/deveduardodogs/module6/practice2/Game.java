@@ -1,4 +1,4 @@
-package com.cert.oca8.course.deveduardodogs.soccer_game_6_1_6_2;
+package com.cert.oca8.course.deveduardodogs.module6.practice2;
 
 public class Game {
 
