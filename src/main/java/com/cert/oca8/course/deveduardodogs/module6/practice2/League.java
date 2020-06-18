@@ -52,11 +52,12 @@ public class League {
         totalGoals[0].thePlayer = player2;
         totalGoals[0].theTeam = team1;
         totalGoals[0].theTime = 91.52;
+        match1.goals = totalGoals;
 
         /* Practice 6-2. Print out the score of the Game */
         System.out.println("This was the first match of the season and the score is: ");
-        System.out.println(totalGoals[0].theTeam.teamName + ": " + totalGoals.length + " - " + team2.teamName + ": " + 0);
-        System.out.println("Goal scored by " + totalGoals[0].thePlayer.playerName + " '" + totalGoals[0].theTime);
+        System.out.println(match1.goals[0].theTeam.teamName + ": " + match1.goals.length + " - " + team2.teamName + ": " + 0);
+        System.out.println("Goal scored by " + match1.goals[0].thePlayer.playerName + " '" + match1.goals[0].theTime);
 
     }
 
