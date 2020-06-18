@@ -14,6 +14,6 @@ public class Game {
    public Team teamHome;
    public String referee;
    public String city;
-   public Goal[] goals ;
+   public Goal[] goals;
    
 }
