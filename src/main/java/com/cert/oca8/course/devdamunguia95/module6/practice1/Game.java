@@ -10,10 +10,9 @@ package com.cert.oca8.course.devdamunguia95.module6.practice1;
  * @author dmunguias
  */
 public class Game {
-   public Team teamVisit;
-   public Team teamHome;
-   public String referee;
-   public String city;
-   public Goal[] goals;
-   
+ 
+    public Team homeTeam;
+    public Team awayTeam;
+    public Goal[] goals;
+    
 }

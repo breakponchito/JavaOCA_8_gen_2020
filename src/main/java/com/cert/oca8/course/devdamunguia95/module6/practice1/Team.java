@@ -10,8 +10,7 @@ package com.cert.oca8.course.devdamunguia95.module6.practice1;
  * @author dmunguias
  */
 public class Team {
-    public String nameOfTeam;
-    public String color; 
+    public String teamName; 
     public Player[] players;
     
 }
