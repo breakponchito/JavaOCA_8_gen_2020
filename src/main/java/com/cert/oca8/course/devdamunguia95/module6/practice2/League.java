@@ -27,26 +27,26 @@ public class League {
 
         Team team1 = new Team();
         team1.teamName = "The Greens";
-        team1.players = thePlayers;
+        team1.playerArray = thePlayers;
 
         //Second Team
         Team team2 = new Team();
         team2.teamName = "The Reeds";
-        team2.players = new Player[3];
+        team2.playerArray = new Player[3];
 
-        team2.players[0] = new Player();
-        team2.players[0].playerName = "Robert Service";
-        team2.players[1] = new Player();
-        team2.players[1].playerName = "Robbie Burns";
-        team2.players[2] = new Player();
-        team2.players[2].playerName = "Rafael Sabatini";
+        team2.playerArray[0] = new Player();
+        team2.playerArray[0].playerName = "Robert Service";
+        team2.playerArray[1] = new Player();
+        team2.playerArray[1].playerName = "Robbie Burns";
+        team2.playerArray[2] = new Player();
+        team2.playerArray[2].playerName = "Rafael Sabatini";
 
         Game currGame = new Game();
         currGame.homeTeam = team1;
         currGame.awayTeam = team2;
 
         Goal goal1 = new Goal();
-        goal1.ThePlayer = currGame.homeTeam.players[2];
+        goal1.thePlayer = currGame.homeTeam.playerArray[2];
         goal1.theTeam = currGame.homeTeam;
         goal1.theTime = 55;
 
@@ -55,7 +55,7 @@ public class League {
 
         System.out.println("Goal scored after "
                 + currGame.goals[0].theTime + " mins by "
-                + currGame.goals[0].ThePlayer.playerName + " of "
+                + currGame.goals[0].thePlayer.playerName + " of "
                 + currGame.goals[0].theTeam.teamName);
 
     }

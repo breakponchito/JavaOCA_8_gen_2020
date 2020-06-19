@@ -12,7 +12,7 @@ package com.cert.oca8.course.devdamunguia95.module6.practice1;
 public class Goal {
 
     public Team theTeam;
-    public Player ThePlayer;
+    public Player thePlayer;
     public double theTime;
 
 }

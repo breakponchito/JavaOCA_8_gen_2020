@@ -25,31 +25,23 @@ public class League {
 
         Team team1 = new Team();
         team1.teamName = "The Greens";
-        team1.players = thePlayers;
+        team1.playerArray = thePlayers;
 
-        // player1.playerName="Robert Service";
-        for (Player thePlayer : thePlayers) {
-
-            System.out.println("Team 1 " + thePlayer.playerName);
-
-        }
+      
 
         //Second Team
         Team team2 = new Team();
         team2.teamName = "The Reeds";
-        team2.players = new Player[3];
+        team2.playerArray = new Player[3];
 
-        team2.players[0] = new Player();
-        team2.players[0].playerName = "Robert Service";
-        team2.players[1] = new Player();
-        team2.players[1].playerName = "Robbie Burns";
-        team2.players[2] = new Player();
-        team2.players[2].playerName = "Rafael Sabatini";
+        team2.playerArray[0] = new Player();
+        team2.playerArray[0].playerName = "Robert Service";
+        team2.playerArray[1] = new Player();
+        team2.playerArray[1].playerName = "Robbie Burns";
+        team2.playerArray[2] = new Player();
+        team2.playerArray[2].playerName = "Rafael Sabatini";
 
-        for (Player player : team2.players) {
-            System.out.println("Team 2 " + player.playerName);
-
-        }
+      
 
     }
 
