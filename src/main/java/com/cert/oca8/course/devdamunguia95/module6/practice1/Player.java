@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cert.oca8.course.devdamunguia95;
+package com.cert.oca8.course.devdamunguia95.module6.practice1;
 
 /**
  *
- * @author alfonso.valdez
+ * @author dmunguias
  */
-public class MainTest {
-    
+public class Player {
+    public String playerName;
 }
