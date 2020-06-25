@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cert.oca8.course.devdamunguia95.module6.practice2;
+package com.cert.oca8.course.devdamunguia95.module7.practice1;
 
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
+
 /**
  *
  * @author dmunguias
@@ -60,6 +61,27 @@ public class League {
                 + currGame.goals[0].thePlayer.playerName + " of "
                 + currGame.goals[0].theTeam.teamName);
 
+        for (Player thePlayer : team2.playerArray) {
+
+            if (thePlayer.playerName.matches(".*Sab.*")) {
+                System.out.println("Found " + thePlayer.playerName);
+                System.out.println("The last name is " + thePlayer.playerName.split(" ")[1]);
+
+            }
+
+        }
+
+        StringBuilder familyNameFirst = new StringBuilder();
+        for (Player thePlayer : team1.playerArray) {
+
+            String name[] = thePlayer.playerName.split(" ");
+
+            familyNameFirst.append(name[1]);
+            familyNameFirst.append(", ");
+            familyNameFirst.append(name[0]);
+            System.out.println(familyNameFirst);
+            familyNameFirst.delete(0, familyNameFirst.length());
+        }
     }
 
 }
