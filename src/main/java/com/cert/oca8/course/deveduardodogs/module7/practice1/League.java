@@ -46,7 +46,7 @@ public class League {
         //Put Goal object in a Goal array and assign Goal array to goals attribute of Game object
         currGame.goals = new Goal[] {goal};
 
-        /* Practice 6-2. Print out the score of the Game */
+        //Print out the score of the Game
         System.out.println("Goal scored after " +
         currGame.goals[0].theTime + " mins by " +
         currGame.goals[0].thePlayer.playerName + " of " +
