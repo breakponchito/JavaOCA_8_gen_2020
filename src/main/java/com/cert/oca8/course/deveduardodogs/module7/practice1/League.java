@@ -32,18 +32,18 @@ public class League {
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
 
-        /* Practice 6-2. Create a Game here */
+        //Create a Game here
         Game currGame = new Game();
         currGame.homeTeam = team1;
         currGame.awayTeam = team2;
 
-        /* Practice 6-2. Create a Goal object here */
+        //Create a Goal object here
         Goal goal = new Goal();
         goal.thePlayer = player2;
         goal.theTeam = team1;
         goal.theTime = 55;
 
-        /* Practice 6-2. Put  Goal object in a Goal array and assign Goal array to goals attribute of Game object */
+        //Put Goal object in a Goal array and assign Goal array to goals attribute of Game object
         currGame.goals = new Goal[] {goal};
 
         /* Practice 6-2. Print out the score of the Game */
@@ -52,7 +52,7 @@ public class League {
         currGame.goals[0].thePlayer.playerName + " of " +
         currGame.goals[0].theTeam.teamName);
 
-        /* Practice 7-1. Add code for finding a player within team2 here */
+        //Add code for finding a player within team2 here
         for (Player thePlayer: team2.playerArray) {
             System.out.println(thePlayer.playerName);
         }

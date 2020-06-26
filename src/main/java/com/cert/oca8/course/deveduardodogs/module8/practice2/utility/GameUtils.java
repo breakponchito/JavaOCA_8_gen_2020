@@ -16,7 +16,6 @@ public class GameUtils {
             currGame.goals = new Goal[(int) (Math.random() * 9)];
         }
 
-        //System.out.println(currGame.goals.length);
         int i = 0;
         for (Goal currGoal : currGame.goals) {
             currGoal = new Goal();

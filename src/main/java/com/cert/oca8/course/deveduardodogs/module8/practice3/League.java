@@ -8,10 +8,10 @@ public class League {
     public static void main(String[] args) {
         League theLeague = new League();
 
-        /* Create the teams here */
+        // Create the teams here
         Team[] theTeams = theLeague.createTeams();
 
-        /* Create a Game here */
+        // Create a Game here
         Game[] theGames = theLeague.createGames(theTeams);
         Game currGame = theGames[0];
 

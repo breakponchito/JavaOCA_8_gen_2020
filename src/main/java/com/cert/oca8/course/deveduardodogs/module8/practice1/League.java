@@ -9,25 +9,25 @@ public class League {
 
     public static void main(String[] args) {
 
-        /* Create the teams here */
+        // Create the teams here
         Team[] theTeams = createTeams();
         Team team1 = theTeams[0];
         Team team2 = theTeams[1];
 
-        /* Create a Game here */
+        // Create a Game here
         Game[] theGames = createGames(theTeams);
         Game currGame = theGames[0];
 
-        /* Practice 6-2. Create a Goal object here */
+        // Create a Goal object here
         Goal goal = new Goal();
         goal.thePlayer = team2.playerArray[2];
         goal.theTeam = team2;
         goal.theTime = 55;
 
-        /* Practice 6-2. Put  Goal object in a Goal array and assign Goal array to goals attribute of Game object */
+        // Put Goal object in a Goal array and assign Goal array to goals attribute of Game object
         currGame.goals = new Goal[] {goal};
 
-        /* Practice 6-2. Print out the score of the Game */
+        // Print out the score of the Game
         System.out.println("Goal scored after " +
         currGame.goals[0].theTime + " mins by " +
         currGame.goals[0].thePlayer.playerName + " of " +

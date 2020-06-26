@@ -7,10 +7,10 @@ public class League {
 
     public static void main(String[] args) {
 
-        /* Create the teams here */
+        //Create the teams here
         Team[] theTeams = createTeams();
 
-        /* Create a Game here */
+        //Create a Game here
         Game[] theGames = createGames(theTeams);
         Game currGame = theGames[0];
 
