@@ -20,7 +20,7 @@ public class League {
         Game[] theGames = league.createGames(theTeams);
 
         Game currGame = theGames[0];
-        currGame.playGame(6);
+        currGame.playGame();
         System.out.println(currGame.getDescription());
 
     }
