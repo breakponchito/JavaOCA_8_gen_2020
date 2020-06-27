@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cert.oca8.course.devdamunguia95.module8.practice1;
+package com.cert.oca8.course.devdamunguia95.module8.practice2;
 
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
+import com.cert.oca8.course.devdamunguia95.module8.practice2.Utility.GameUtils;
 
 /**
  *
@@ -22,43 +23,17 @@ public class League {
         Game[] theGames = createGames(theTeams);
 
         Game currGame = theGames[0];
-      
-        
-        Goal goal1 = new Goal();
 
-        goal1.thePlayer = currGame.homeTeam.playerArray[2];
-        goal1.theTeam = currGame.homeTeam;
-        goal1.theTime = 55;
+        GameUtils.addGamesGoals(currGame);
 
-        Goal[] theGoals = {goal1};
-        currGame.goals = theGoals;
-
-        System.out.println("Goal scored after "
-                + currGame.goals[0].theTime + " mins by "
-                + currGame.goals[0].thePlayer.playerName + " of "
-                + currGame.goals[0].theTeam.teamName);
-
-        for (Player thePlayer : theTeams[1].playerArray) {
-
-            if (thePlayer.playerName.matches(".*Sab.*")) {
-                System.out.println("Found " + thePlayer.playerName);
-                System.out.println("The last name is " + thePlayer.playerName.split(" ")[1]);
-
-            }
-
+        for (Goal goal : currGame.goals) {
+            System.out.println("Goal scored after "
+                    + goal.theTime + " mins by "
+                    + goal.thePlayer.playerName + " of "
+                    + goal.theTeam.teamName);
         }
 
-        StringBuilder familyNameFirst = new StringBuilder();
-        for (Player thePlayer : theTeams[0].playerArray) {
-
-            String name[] = thePlayer.playerName.split(" ");
-
-            familyNameFirst.append(name[1]);
-            familyNameFirst.append(", ");
-            familyNameFirst.append(name[0]);
-            System.out.println(familyNameFirst);
-            familyNameFirst.delete(0, familyNameFirst.length());
-        }
+ 
     }
 
     public static Team[] createTeam() {
