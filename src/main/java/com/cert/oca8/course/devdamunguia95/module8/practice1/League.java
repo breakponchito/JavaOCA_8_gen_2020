@@ -42,7 +42,8 @@ public class League {
 
             if (thePlayer.playerName.matches(".*Sab.*")) {
                 System.out.println("Found " + thePlayer.playerName);
-                System.out.println("The last name is " + thePlayer.playerName.split(" ")[1]);
+                System.out.println("The last name is " +
+                        thePlayer.playerName.split(" ")[1]);
 
             }
 
