@@ -19,23 +19,27 @@ public class Game {
     public Team awayTeam;
     public Goal[] goals;
 
-    public void playGame() {
+    public void playGame(int maxGoals) {
 
-       int numberOfGoals = (int) (Math.random() * 7);
+        int numberOfGoals = (int) (Math.random() * (maxGoals + 1));
         Goal[] theGoals = new Goal[numberOfGoals];
-        this.goals  = theGoals;
-        
+        this.goals = theGoals;
+
         GameUtils.addGamesGoals(this);
     }
-    
-    public String getDescription(){
-    StringBuilder returnString= new StringBuilder();
-     for (Goal goal : this.goals) {
+
+    public void playGame() {
+            playGame(6);
+    }
+
+    public String getDescription() {
+        StringBuilder returnString = new StringBuilder();
+        for (Goal goal : this.goals) {
             returnString.append("Goal scored after "
                     + goal.theTime + " mins by "
                     + goal.thePlayer.playerName + " of "
                     + goal.theTeam.teamName + "\n");
         }
-     return returnString.toString();
+        return returnString.toString();
     }
 }
