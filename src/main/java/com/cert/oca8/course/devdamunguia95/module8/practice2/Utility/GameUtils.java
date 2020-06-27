@@ -16,12 +16,8 @@ public class GameUtils {
 
     public static Game addGamesGoals(Game currGame) {
 
-        int numberOfGoals = (int) (Math.random() * 7);
-
-        Goal[] theGoals = new Goal[numberOfGoals];
-
-          
-        for (int i = 0; i < theGoals.length; i++) {
+      
+        for (int i = 0; i < currGame.goals.length; i++) {
              Goal goals=new Goal();
             int numberOfTeam = (int) (Math.random() * 2);
             if (numberOfTeam != 0) {
@@ -43,11 +39,11 @@ public class GameUtils {
                 goals.theTime = (int) (Math.random() * 90);
             }
 
-            theGoals[i]=goals;
+            currGame.goals[i]=goals;
         }
     
 
-    currGame.goals  = theGoals;
+
 
     return currGame ;
 

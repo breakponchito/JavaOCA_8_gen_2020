@@ -23,17 +23,9 @@ public class League {
         Game[] theGames = createGames(theTeams);
 
         Game currGame = theGames[0];
+        currGame.playGame();
+        System.out.println(currGame.getDescription());
 
-        GameUtils.addGamesGoals(currGame);
-
-        for (Goal goal : currGame.goals) {
-            System.out.println("Goal scored after "
-                    + goal.theTime + " mins by "
-                    + goal.thePlayer.playerName + " of "
-                    + goal.theTeam.teamName);
-        }
-
- 
     }
 
     public static Team[] createTeam() {
