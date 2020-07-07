@@ -1,32 +1,34 @@
-package com.cert.oca8.course.deveduardodogs.module8.practice2.utility;
+package com.cert.oca8.course.deveduardodogs.module9.practice2.utility;
+
+import com.cert.oca8.course.deveduardodogs.module9.practice2.Game;
+import com.cert.oca8.course.deveduardodogs.module9.practice2.Goal;
+import com.cert.oca8.course.deveduardodogs.module9.practice2.Team;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import com.cert.oca8.course.deveduardodogs.module6.practice1.Goal;
-import com.cert.oca8.course.deveduardodogs.module6.practice1.Team;
-import com.cert.oca8.course.deveduardodogs.module8.practice2.Game;
 
 public class GameUtils {
 
     public static void addGameGoals(Game currGame) {
 
-        if (currGame.goals == null) {
-            currGame.goals = new Goal[(int) (Math.random() * 9)];
+        if (currGame.getGoals() == null) {
+            currGame.setGoals(new Goal[(int) (Math.random() * 9)]);
         }
 
         int i = 0;
-        for (Goal currGoal : currGame.goals) {
+        for (Goal currGoal: currGame.getGoals()) {
             currGoal = new Goal();
-            currGoal.theTeam = Math.random() > 0.5 ? getHomeTeam(currGame, "home") : getHomeTeam(currGame, "away");
-            currGoal.thePlayer = currGoal.theTeam.playerArray[(int) (Math.random() *
-                    currGoal.theTeam.playerArray.length)];
-            currGoal.theTime = (int) (Math.random() * 90);
-            currGame.goals[i] = currGoal;
+            currGoal.setTheTeam(Math.random() > 0.5 ? getHomeTeam(currGame, "home") : getHomeTeam(currGame, "away"));
+            currGoal.setThePlayer(currGoal.getTheTeam().getPlayerArray()[(int) (Math.random() *
+                    currGoal.getTheTeam().getPlayerArray().length)]);
+            currGoal.setTheTime((int) (Math.random() * 90));
+            currGame.getGoals()[i] = currGoal;
             i++;
         }
-        Arrays.sort(currGame.goals, (g1, g2) -> Double.valueOf(g1.theTime).compareTo(Double.valueOf(g2.theTime)));
+        Arrays.sort(currGame.getGoals(),
+                (g1, g2) -> Double.valueOf(g1.getTheTime()).compareTo(Double.valueOf(g2.getTheTime())));
     }
 
     // Uses reflection so works with getter method or public field

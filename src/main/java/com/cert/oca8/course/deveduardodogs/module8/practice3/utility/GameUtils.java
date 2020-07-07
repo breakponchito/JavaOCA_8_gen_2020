@@ -21,7 +21,8 @@ public class GameUtils {
         for (Goal currGoal : currGame.goals) {
             currGoal = new Goal();
             currGoal.theTeam = Math.random() > 0.5 ? getHomeTeam(currGame, "home") : getHomeTeam(currGame, "away");
-            currGoal.thePlayer = currGoal.theTeam.playerArray[(int) (Math.random() * currGoal.theTeam.playerArray.length)];
+            currGoal.thePlayer = currGoal.theTeam.playerArray[(int) (Math.random() *
+                    currGoal.theTeam.playerArray.length)];
             currGoal.theTime = (int) (Math.random() * 90);
             currGame.goals[i] = currGoal;
             i++;
@@ -35,7 +36,8 @@ public class GameUtils {
         Method m;
         Field f;
         try {
-            m = Game.class.getMethod("get" + Character.toUpperCase(homeOrAway.charAt(0)) + homeOrAway.substring(1) + "Team");
+            m = Game.class.getMethod("get" + Character.toUpperCase(homeOrAway.charAt(0)) +
+                    homeOrAway.substring(1) + "Team");
             theTeam = (Team)m.invoke(currGame);
         } catch (NoSuchMethodException|IllegalAccessException|InvocationTargetException em) {
             try {
