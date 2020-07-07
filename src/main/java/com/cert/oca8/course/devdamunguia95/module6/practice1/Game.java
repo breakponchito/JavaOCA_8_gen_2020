@@ -5,8 +5,7 @@
  */
 package com.cert.oca8.course.devdamunguia95.module6.practice1;
 
-import static com.cert.oca8.course.devdamunguia95.module8.practice2.League.createGames;
-import static com.cert.oca8.course.devdamunguia95.module8.practice2.League.createTeam;
+
 import com.cert.oca8.course.devdamunguia95.module8.practice2.Utility.GameUtils;
 
 /**
@@ -19,17 +18,24 @@ public class Game {
     private Team awayTeam;
     private Goal[] goals;
 
-    public void playGame(int maxGoals) {
+    public Game() {
+    }
 
+    public Game(Team homeTeam, Team awayTeam) {
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+
+    }
+
+    public void playGame(int maxGoals) {
         int numberOfGoals = (int) (Math.random() * (maxGoals + 1));
         Goal[] theGoals = new Goal[numberOfGoals];
         this.setGoals(theGoals);
-
         GameUtils.addGamesGoals(this);
     }
 
     public void playGame() {
-            playGame(6);
+        playGame(6);
     }
 
     public String getDescription() {
@@ -84,5 +90,5 @@ public class Game {
     public void setGoals(Goal[] goals) {
         this.goals = goals;
     }
-    
+
 }

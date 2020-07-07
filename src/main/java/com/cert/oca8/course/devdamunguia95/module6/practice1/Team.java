@@ -10,8 +10,23 @@ package com.cert.oca8.course.devdamunguia95.module6.practice1;
  * @author dmunguias
  */
 public class Team {
-   private String teamName; 
+
+    private String teamName;
     private Player[] playerArray;
+
+    public Team() {
+
+    }
+
+    public Team(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public Team(String teamName, Player[] playerArray) {
+    this(teamName);
+        this.playerArray = playerArray;
+    }
+
     /**
      * @return the teamName
      */
@@ -39,6 +54,5 @@ public class Team {
     public void setPlayerArray(Player[] playerArray) {
         this.playerArray = playerArray;
     }
- 
-    
+
 }
