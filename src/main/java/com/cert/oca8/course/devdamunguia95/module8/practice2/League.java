@@ -31,29 +31,29 @@ public class League {
     public static Team[] createTeam() {
         // TODO code application logic here
         Player player1 = new Player();
-        player1.playerName = "George Eliot";
+        player1.setPlayerName("George Eliot");
         Player player2 = new Player();
-        player2.playerName = "Graham Greene";
+        player2.setPlayerName("Graham Greene");
         Player player3 = new Player();
-        player3.playerName = "Geoffrey Chaucer";
+        player3.setPlayerName("Geoffrey Chaucer");
 
         Player[] thePlayers = {player1, player2, player3};
 
         Team team1 = new Team();
-        team1.teamName = "The Greens";
-        team1.playerArray = thePlayers;
+        team1.setTeamName("The Greens");
+        team1.setPlayerArray(thePlayers);
 
         //Second Team
         Team team2 = new Team();
-        team2.teamName = "The Reeds";
-        team2.playerArray = new Player[3];
+        team2.setTeamName("The Reeds");
+        team2.setPlayerArray(new Player[3]);
 
-        team2.playerArray[0] = new Player();
-        team2.playerArray[0].playerName = "Robert Service";
-        team2.playerArray[1] = new Player();
-        team2.playerArray[1].playerName = "Robbie Burns";
-        team2.playerArray[2] = new Player();
-        team2.playerArray[2].playerName = "Rafael Sabatini";
+        team2.getPlayerArray()[0] = new Player();
+        team2.getPlayerArray()[0].setPlayerName("Robert Service");
+        team2.getPlayerArray()[1] = new Player();
+        team2.getPlayerArray()[1].setPlayerName("Robbie Burns");
+        team2.getPlayerArray()[2] = new Player();
+        team2.getPlayerArray()[2].setPlayerName("Rafael Sabatini");
 
         Team[] theTeams = {team1, team2};
         return theTeams;
@@ -61,8 +61,8 @@ public class League {
 
     public static Game[] createGames(Team[] theTeams) {
         Game theGame = new Game();
-        theGame.homeTeam = theTeams[0];
-        theGame.awayTeam = theTeams[1];
+        theGame.setHomeTeam(theTeams[0]);
+        theGame.setAwayTeam(theTeams[1]);
 
         Game[] theGames = {theGame};
         return theGames;

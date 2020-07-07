@@ -10,5 +10,19 @@ package com.cert.oca8.course.devdamunguia95.module6.practice1;
  * @author dmunguias
  */
 public class Player {
-    public String playerName;
+    private String playerName;
+
+    /**
+     * @return the playerName
+     */
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    /**
+     * @param playerName the playerName to set
+     */
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
 }

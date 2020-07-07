@@ -3,20 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cert.oca8.course.devdamunguia95.module6.practice2;
+package com.cert.oca8.course.devdamunguia95.module9.practice1;
+
 
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
+
 /**
  *
  * @author dmunguias
  */
 public class League {
+      public static void main(String[] args) {
+            League league=new League();
+        Team[] theTeams = league.createTeam();
+        Game[] theGames = league.createGames(theTeams);
 
-    public static void main(String[] args) {
+        Game currGame = theGames[0];
+        currGame.playGame();
+        System.out.println(currGame.getDescription());
 
+    }
+
+    public  Team[] createTeam() {
         // TODO code application logic here
         Player player1 = new Player();
         player1.setPlayerName("George Eliot");
@@ -43,22 +53,17 @@ public class League {
         team2.getPlayerArray()[2] = new Player();
         team2.getPlayerArray()[2].setPlayerName("Rafael Sabatini");
 
-        Game currGame = new Game();
-        currGame.setHomeTeam(team1);
-        currGame.setAwayTeam(team2);
+        Team[] theTeams = {team1, team2};
+        return theTeams;
+    }
 
-        Goal goal1 = new Goal();
-        goal1.setThePlayer(currGame.getHomeTeam().getPlayerArray()[2]);
-        goal1.setTheTeam(currGame.getHomeTeam());
-        goal1.setTheTime(55);
+    public  Game[] createGames(Team[] theTeams) {
+        Game theGame = new Game();
+        theGame.setHomeTeam(theTeams[0]);
+        theGame.setAwayTeam(theTeams[1]);
 
-        Goal[] theGoals = {goal1};
-        currGame.setGoals(theGoals);
-
-        System.out.println("Goal scored after "
-                + currGame.getGoals()[0].getTheTime() + " mins by "
-                + currGame.getGoals()[0].getThePlayer().getPlayerName() + " of "
-                + currGame.getGoals()[0].getTheTeam().getTeamName());
+        Game[] theGames = {theGame};
+        return theGames;
 
     }
 

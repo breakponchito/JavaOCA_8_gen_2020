@@ -17,29 +17,29 @@ public class GameUtils {
     public static Game addGamesGoals(Game currGame) {
 
       
-        for (int i = 0; i < currGame.goals.length; i++) {
+        for (int i = 0; i < currGame.getGoals().length; i++) {
              Goal goals=new Goal();
             int numberOfTeam = (int) (Math.random() * 2);
             if (numberOfTeam != 0) {
 
-                int arrayPlayerLength = currGame.awayTeam.playerArray.length;
+                int arrayPlayerLength = currGame.getAwayTeam().getPlayerArray().length;
                 int numberOfPlayer = (int) (Math.random() * arrayPlayerLength);
             
-                goals.thePlayer = currGame.awayTeam.playerArray[numberOfPlayer];
-                goals.theTeam = currGame.awayTeam;
-                goals.theTime = (int) (Math.random() * 90);
+                goals.setThePlayer(currGame.getAwayTeam().getPlayerArray()[numberOfPlayer]);
+                goals.setTheTeam(currGame.getAwayTeam());
+                goals.setTheTime((int) (Math.random() * 90));
                 
             } 
             else{
 
-                int arrayPlayerLength = currGame.homeTeam.playerArray.length;
+                int arrayPlayerLength = currGame.getHomeTeam().getPlayerArray().length;
                 int numberOfPlayer = (int) (Math.random() * arrayPlayerLength);
-                goals.thePlayer = currGame.homeTeam.playerArray[numberOfPlayer];
-                goals.theTeam = currGame.homeTeam;
-                goals.theTime = (int) (Math.random() * 90);
+                goals.setThePlayer(currGame.getHomeTeam().getPlayerArray()[numberOfPlayer]);
+                goals.setTheTeam(currGame.getHomeTeam());
+                goals.setTheTime((int) (Math.random() * 90));
             }
 
-            currGame.goals[i]=goals;
+            currGame.getGoals()[i]=goals;
         }
     
 

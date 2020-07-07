@@ -15,15 +15,15 @@ import com.cert.oca8.course.devdamunguia95.module8.practice2.Utility.GameUtils;
  */
 public class Game {
 
-    public Team homeTeam;
-    public Team awayTeam;
-    public Goal[] goals;
+    private Team homeTeam;
+    private Team awayTeam;
+    private Goal[] goals;
 
     public void playGame(int maxGoals) {
 
         int numberOfGoals = (int) (Math.random() * (maxGoals + 1));
         Goal[] theGoals = new Goal[numberOfGoals];
-        this.goals = theGoals;
+        this.setGoals(theGoals);
 
         GameUtils.addGamesGoals(this);
     }
@@ -34,12 +34,55 @@ public class Game {
 
     public String getDescription() {
         StringBuilder returnString = new StringBuilder();
-        for (Goal goal : this.goals) {
+        for (Goal goal : this.getGoals()) {
             returnString.append("Goal scored after "
-                    + goal.theTime + " mins by "
-                    + goal.thePlayer.playerName + " of "
-                    + goal.theTeam.teamName + "\n");
+                    + goal.getTheTime() + " mins by "
+                    + goal.getThePlayer().getPlayerName() + " of "
+                    + goal.getTheTeam().getTeamName() + "\n");
         }
         return returnString.toString();
     }
+
+    /**
+     * @return the homeTeam
+     */
+    public Team getHomeTeam() {
+        return homeTeam;
+    }
+
+    /**
+     * @param homeTeam the homeTeam to set
+     */
+    public void setHomeTeam(Team homeTeam) {
+        this.homeTeam = homeTeam;
+    }
+
+    /**
+     * @return the awayTeam
+     */
+    public Team getAwayTeam() {
+        return awayTeam;
+    }
+
+    /**
+     * @param awayTeam the awayTeam to set
+     */
+    public void setAwayTeam(Team awayTeam) {
+        this.awayTeam = awayTeam;
+    }
+
+    /**
+     * @return the goals
+     */
+    public Goal[] getGoals() {
+        return goals;
+    }
+
+    /**
+     * @param goals the goals to set
+     */
+    public void setGoals(Goal[] goals) {
+        this.goals = goals;
+    }
+    
 }
