@@ -6,9 +6,6 @@
 package com.cert.oca8.course.devdamunguia95.module9.practice1;
 
 
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
 
 /**
  *
@@ -16,7 +13,7 @@ import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
  */
 public class League {
       public static void main(String[] args) {
-            League league=new League();
+       League league=new League();
         Team[] theTeams = league.createTeam();
         Game[] theGames = league.createGames(theTeams);
 
@@ -66,5 +63,4 @@ public class League {
         return theGames;
 
     }
-
 }

@@ -1,7 +1,9 @@
-package com.cert.oca8.course.devdamunguia95.module8.practice2.Utility;
+package com.cert.oca8.course.devdamunguia95.module8.practice3.utility;
 
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
+
+import com.cert.oca8.course.devdamunguia95.module8.practice3.Game;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
+import com.cert.oca8.course.devdamunguia95.module8.practice3.Game;
 
 /**
  *

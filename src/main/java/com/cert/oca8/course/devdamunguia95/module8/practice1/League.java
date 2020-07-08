@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cert.oca8.course.devdamunguia95.module8.practice1;
 
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
@@ -22,37 +17,35 @@ public class League {
         Game[] theGames = createGames(theTeams);
 
         Game currGame = theGames[0];
-      
-        
         Goal goal1 = new Goal();
 
-        goal1.setThePlayer(currGame.getHomeTeam().getPlayerArray()[2]);
-        goal1.setTheTeam(currGame.getHomeTeam());
-        goal1.setTheTime(55);
+        goal1.thePlayer = currGame.homeTeam.playerArray[2];
+        goal1.theTeam = currGame.homeTeam;
+        goal1.theTime = 55;
 
         Goal[] theGoals = {goal1};
-        currGame.setGoals(theGoals);
+        currGame.goals = theGoals;
 
         System.out.println("Goal scored after "
-                + currGame.getGoals()[0].getTheTime() + " mins by "
-                + currGame.getGoals()[0].getThePlayer().getPlayerName() + " of "
-                + currGame.getGoals()[0].getTheTeam().getTeamName());
+                + currGame.goals[0].theTime + " mins by "
+                + currGame.goals[0].thePlayer.playerName + " of "
+                + currGame.goals[0].theTeam.teamName);
 
-        for (Player thePlayer : theTeams[1].getPlayerArray()) {
+        for (Player thePlayer : theTeams[1].playerArray) {
 
-            if (thePlayer.getPlayerName().matches(".*Sab.*")) {
-                System.out.println("Found " + thePlayer.getPlayerName());
-                System.out.println("The last name is " +
-                        thePlayer.getPlayerName().split(" ")[1]);
+            if (thePlayer.playerName.matches(".*Sab.*")) {
+                System.out.println("Found " + thePlayer.playerName);
+                System.out.println("The last name is " + 
+                        thePlayer.playerName.split(" ")[1]);
 
             }
 
         }
 
         StringBuilder familyNameFirst = new StringBuilder();
-        for (Player thePlayer : theTeams[0].getPlayerArray()) {
+        for (Player thePlayer : theTeams[0].playerArray) {
 
-            String name[] = thePlayer.getPlayerName().split(" ");
+            String name[] = thePlayer.playerName.split(" ");
 
             familyNameFirst.append(name[1]);
             familyNameFirst.append(", ");
@@ -65,29 +58,29 @@ public class League {
     public static Team[] createTeam() {
         // TODO code application logic here
         Player player1 = new Player();
-        player1.setPlayerName("George Eliot");
+        player1.playerName = "George Eliot";
         Player player2 = new Player();
-        player2.setPlayerName("Graham Greene");
+        player2.playerName = "Graham Greene";
         Player player3 = new Player();
-        player3.setPlayerName("Geoffrey Chaucer");
+        player3.playerName = "Geoffrey Chaucer";
 
         Player[] thePlayers = {player1, player2, player3};
 
         Team team1 = new Team();
-        team1.setTeamName("The Greens");
-        team1.setPlayerArray(thePlayers);
+        team1.teamName = "The Greens";
+        team1.playerArray = thePlayers;
 
         //Second Team
         Team team2 = new Team();
-        team2.setTeamName("The Reeds");
-        team2.setPlayerArray(new Player[3]);
+        team2.teamName = "The Reeds";
+        team2.playerArray = new Player[3];
 
-        team2.getPlayerArray()[0] = new Player();
-        team2.getPlayerArray()[0].setPlayerName("Robert Service");
-        team2.getPlayerArray()[1] = new Player();
-        team2.getPlayerArray()[1].setPlayerName("Robbie Burns");
-        team2.getPlayerArray()[2] = new Player();
-        team2.getPlayerArray()[2].setPlayerName("Rafael Sabatini");
+        team2.playerArray[0] = new Player();
+        team2.playerArray[0].playerName = "Robert Service";
+        team2.playerArray[1] = new Player();
+        team2.playerArray[1].playerName = "Robbie Burns";
+        team2.playerArray[2] = new Player();
+        team2.playerArray[2].playerName = "Rafael Sabatini";
 
         Team[] theTeams = {team1, team2};
         return theTeams;
@@ -95,8 +88,8 @@ public class League {
 
     public static Game[] createGames(Team[] theTeams) {
         Game theGame = new Game();
-        theGame.setHomeTeam(theTeams[0]);
-        theGame.setAwayTeam(theTeams[1]);
+        theGame.homeTeam = theTeams[0];
+        theGame.awayTeam = theTeams[1];
 
         Game[] theGames = {theGame};
         return theGames;
