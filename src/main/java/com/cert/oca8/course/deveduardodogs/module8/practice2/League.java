@@ -44,7 +44,7 @@ public class League {
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
 
-        Team theTeams[] = {team1, team2};
+        Team[] theTeams = {team1, team2};
 
         return theTeams;
     }
