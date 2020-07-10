@@ -1,6 +1,7 @@
 package com.cert.oca8.course.devdamunguia95.module8.practice1;
 
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
+
+import com.cert.oca8.course.devdamunguia95.module8.practice2.Game;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
@@ -13,40 +14,31 @@ public class League {
 
     public static void main(String[] args) {
 
-        Team[] theTeams = createTeam();
+        Team[] theTeams = createTeams();
         Game[] theGames = createGames(theTeams);
-
         Game currGame = theGames[0];
         Goal goal1 = new Goal();
-
         goal1.thePlayer = currGame.homeTeam.playerArray[2];
         goal1.theTeam = currGame.homeTeam;
         goal1.theTime = 55;
-
         Goal[] theGoals = {goal1};
         currGame.goals = theGoals;
-
         System.out.println("Goal scored after "
                 + currGame.goals[0].theTime + " mins by "
                 + currGame.goals[0].thePlayer.playerName + " of "
                 + currGame.goals[0].theTeam.teamName);
-
-        for (Player thePlayer : theTeams[1].playerArray) {
-
-            if (thePlayer.playerName.matches(".*Sab.*")) {
+        for (Player thePlayer : theTeams[1].playerArray)  {
+            if (thePlayer.playerName.matches(".*Sab.*"))
+   {
                 System.out.println("Found " + thePlayer.playerName);
                 System.out.println("The last name is " + 
                         thePlayer.playerName.split(" ")[1]);
-
             }
-
         }
-
         StringBuilder familyNameFirst = new StringBuilder();
-        for (Player thePlayer : theTeams[0].playerArray) {
-
+        for (Player thePlayer : theTeams[0].playerArray) 
+        {
             String name[] = thePlayer.playerName.split(" ");
-
             familyNameFirst.append(name[1]);
             familyNameFirst.append(", ");
             familyNameFirst.append(name[0]);
@@ -55,7 +47,7 @@ public class League {
         }
     }
 
-    public static Team[] createTeam() {
+    public static Team[] createTeams() {
         // TODO code application logic here
         Player player1 = new Player();
         player1.playerName = "George Eliot";
@@ -95,5 +87,4 @@ public class League {
         return theGames;
 
     }
-
 }

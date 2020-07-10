@@ -9,7 +9,6 @@ import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
-
 /**
  *
  * @author dmunguias
@@ -60,7 +59,5 @@ public class League {
                 + currGame.goals[0].theTime + " mins by "
                 + currGame.goals[0].thePlayer.playerName + " of "
                 + currGame.goals[0].theTeam.teamName);
-
     }
-
 }

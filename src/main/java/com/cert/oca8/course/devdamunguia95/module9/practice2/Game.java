@@ -4,10 +4,7 @@
  * and open the template in the editor.
  */
 package com.cert.oca8.course.devdamunguia95.module9.practice2;
-
-
 import com.cert.oca8.course.devdamunguia95.module9.practice2.utility.GameUtils;
-
 /**
  *
  * @author dmunguias
@@ -24,7 +21,6 @@ public class Game {
     public Game(Team homeTeam, Team awayTeam) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
-
     }
 
     public void playGame(int maxGoals) {
@@ -90,5 +86,4 @@ public class Game {
     public void setGoals(Goal[] goals) {
         this.goals = goals;
     }
-
 }

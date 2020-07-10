@@ -5,9 +5,6 @@
  */
 package com.cert.oca8.course.devdamunguia95.module6.practice1;
 
-
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
 /**
  *
  * @author dmunguias
@@ -30,8 +27,7 @@ public class League {
         team1.teamName = "The Greens";
         team1.playerArray = thePlayers;
 
-        for (Player player : team1.playerArray) 
-        {
+        for (Player player : team1.playerArray) {
             System.out.println(player.playerName);
         }
 
@@ -47,12 +43,8 @@ public class League {
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
 
-        for (Player thePlayer : team2.playerArray) 
-        {
+        for (Player thePlayer : team2.playerArray) {
             System.out.println(thePlayer.playerName);
-
         }
-
     }
-
 }

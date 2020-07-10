@@ -1,37 +1,23 @@
 package com.cert.oca8.course.devdamunguia95.module8.practice2;
 
-import com.cert.oca8.course.devdamunguia95.module6.practice1.Game;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Goal;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Player;
 import com.cert.oca8.course.devdamunguia95.module6.practice1.Team;
-import com.cert.oca8.course.devdamunguia95.module8.practice2.Utility.GameUtils;
-
 /**
  *
  * @author dmunguias
  */
 public class League {
-
+    
     public static void main(String[] args) {
-
-        Team[] theTeams = createTeam();
+        Team[] theTeams = createTeams();
         Game[] theGames = createGames(theTeams);
-
         Game currGame = theGames[0];
-
-        GameUtils.addGamesGoals(currGame);
-
-        for (Goal goal : currGame.goals) {
-            System.out.println("Goal scored after "
-                    + goal.theTime + " mins by "
-                    + goal.thePlayer.playerName + " of "
-                    + goal.theTeam.teamName);
-        }
-
-
+        currGame.playGame();
+        System.out.println(currGame.getDescription());
     }
-
-    public static Team[] createTeam() {
+    
+    public static Team[] createTeams() {
         // TODO code application logic here
         Player player1 = new Player();
         player1.playerName = "George Eliot";
@@ -41,7 +27,6 @@ public class League {
         player3.playerName = "Geoffrey Chaucer";
 
         Player[] thePlayers = {player1, player2, player3};
-
         Team team1 = new Team();
         team1.teamName = "The Greens";
         team1.playerArray = thePlayers;
@@ -57,7 +42,7 @@ public class League {
         team2.playerArray[1].playerName = "Robbie Burns";
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
-
+        
         Team[] theTeams = {team1, team2};
         return theTeams;
     }
@@ -69,7 +54,5 @@ public class League {
 
         Game[] theGames = {theGame};
         return theGames;
-
     }
-
 }

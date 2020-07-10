@@ -6,7 +6,6 @@
 package com.cert.oca8.course.devdamunguia95.module9.practice1;
 
 import com.cert.oca8.course.devdamunguia95.module9.practice1.utility.GameUtils;
-
 /**
  *
  * @author dmunguias
@@ -81,6 +80,5 @@ public class Game {
      */
     public void setGoals(Goal[] goals) {
         this.goals = goals;
-    }
-    
+    }   
 }

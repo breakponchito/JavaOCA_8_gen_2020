@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package com.cert.oca8.course.devdamunguia95.module9.practice1;
-
-
-
 /**
  *
  * @author dmunguias
@@ -61,6 +58,5 @@ public class League {
 
         Game[] theGames = {theGame};
         return theGames;
-
     }
 }

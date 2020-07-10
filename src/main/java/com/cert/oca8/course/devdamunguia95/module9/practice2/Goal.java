@@ -4,10 +4,6 @@
  * and open the template in the editor.
  */
 package com.cert.oca8.course.devdamunguia95.module9.practice2;
-
-
-
-
 /**
  *
  * @author dmunguias
@@ -16,7 +12,6 @@ public class Goal {
     private Team theTeam;
     private Player thePlayer;
     private double theTime;
-
     /**
      * @return the theTeam
      */
@@ -58,6 +53,4 @@ public class Goal {
     public void setTheTime(double theTime) {
         this.theTime = theTime;
     }
-
-
 }
