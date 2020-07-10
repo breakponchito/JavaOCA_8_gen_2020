@@ -1,7 +1,6 @@
-package com.cert.oca8.course.devdanielgom91.module6.practice2.soccer;
+package com.cert.oca8.course.devdanielgom91.module8.practice2.soccer;
 
 import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Game;
-import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Goal;
 import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Player;
 import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Team;
 
@@ -12,7 +11,18 @@ import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Team;
 public class League {
 
     public static void main(String... args) {
-        //plantilla primer equipo
+  
+    	Team[] theTeams = createTeams();
+    	Game[] theGames = createGames(theTeams);
+    	Game currGame = theGames[0];
+    	
+    	currGame.playGame();
+    	
+    	System.out.println(currGame.getDescription());
+        
+    }
+    
+    public static Team[] createTeams() {
         Player player1 = new Player();
         player1.playerName = "George Eliot";
         Player player2 = new Player();
@@ -26,8 +36,6 @@ public class League {
         team1.teamName = "The Greens";
         team1.playerArray = thePlayers;
 
-        
-        //Platilla del segundo equipo
         Team team2 = new Team();
         team2.teamName = "The Reds";
         team2.playerArray = new Player[3];
@@ -37,35 +45,19 @@ public class League {
         team2.playerArray[1].playerName = "Robbie Burns";
         team2.playerArray[2] = new Player();
         team2.playerArray[2].playerName = "Rafael Sabatini";
-  
-        /*
-        * Creacion del objeto Game
-        * compuesto por 3 atributos, los dos equipos del juego y un arreglo 
-        * de objetos de tipo Goles
-         */
-        Game currGame = new Game();
-        currGame.homeTeam = team1;
-        currGame.awayTeam = team2;
-        /*
-        *Anotacion del encuentro, se crea el objeto gol y se le añaden valores
-        *a sus atributos
-        */
-        Goal goal1 = new Goal();
-        goal1.thePlayer = currGame.homeTeam.playerArray[2];
-        goal1.theTeam = currGame.homeTeam;
-        goal1.theTime = 55;
-
-        /*
-         * se crea un arreglo de tipo Goal, para almacenar el gol creado
-         *  
-         */
         
-        Goal[] theGoals = {goal1};
-        currGame.goals = theGoals;
-        System.out.println("Goal scored after " + currGame.goals[0].theTime+" "
-                + "mins by "+currGame.goals[0].thePlayer.playerName+" "+
-                currGame.goals[0].theTeam.teamName);
-        
+        Team[] theTeams  = {team1,team2};
+        return theTeams;
+    }
+    
+    public static Game[] createGames(Team[] theTeams) {
+         Game theGame = new Game();
+         theGame.homeTeam = theTeams[0];
+         theGame.awayTeam = theTeams[1];
+         
+         Game[] theGames = {theGame};
+         
+         return theGames;
     }
 
 }

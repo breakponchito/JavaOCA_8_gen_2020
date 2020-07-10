@@ -1,4 +1,4 @@
-package com.cert.oca8.course.devdanielgom91.module6.practice2.soccer;
+package com.cert.oca8.course.devdanielgom91.module7.practice1;
 
 import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Game;
 import com.cert.oca8.course.devdanielgom91.module6.practice1.soccer.Goal;
@@ -65,6 +65,36 @@ public class League {
         System.out.println("Goal scored after " + currGame.goals[0].theTime+" "
                 + "mins by "+currGame.goals[0].thePlayer.playerName+" "+
                 currGame.goals[0].theTeam.teamName);
+     
+        for (Player thePlayer : team2.playerArray) {
+        	if (thePlayer.playerName.matches(".*Sab.*")) {	
+        		System.out.println("Found " + thePlayer.playerName);
+			}
+			
+		}
+        
+        for (Player thePlayer : team2.playerArray) {
+        	if (thePlayer.playerName.matches(".*Sab.*")) {
+        		//String[] fullName = thePlayer.playerName.split(" ");
+        		System.out.println("Last name is " + thePlayer.playerName.split(" ")[1]);
+			}
+		}
+        
+        StringBuilder familyNameFirst = new StringBuilder();
+        
+        for (Player thePlayer : team1.playerArray) {
+        	String[] fullName = thePlayer.playerName.split(" ");
+        	
+        	familyNameFirst.append(fullName[1]);
+        	familyNameFirst.append(", ");
+        	familyNameFirst.append(fullName[0]);
+        	
+        	System.out.println(familyNameFirst);
+        	
+        	familyNameFirst.delete(0, familyNameFirst.length());
+        	
+		}
+        
         
     }
 
