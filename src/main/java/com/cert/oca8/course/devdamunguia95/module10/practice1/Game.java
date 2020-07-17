@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cert.oca8.course.devdamunguia95.module9.practice2;
-import com.cert.oca8.course.devdamunguia95.module9.practice2.utility.GameUtils;
+package com.cert.oca8.course.devdamunguia95.module10.practice1;
+
+import com.cert.oca8.course.devdamunguia95.module10.practice1.utility.GameUtils;
+
 /**
  *
  * @author dmunguias
@@ -35,13 +37,38 @@ public class Game {
     }
 
     public String getDescription() {
+        int homeTeamGoals = 0;
+        int awayTeamGoals = 0;
         StringBuilder returnString = new StringBuilder();
+
+        returnString.append(homeTeam.getTeamName()
+                + " vs " + awayTeam.getTeamName() + "\n");
         for (Goal currGame : this.getGoals()) {
+            if (currGame.getTheTeam() == homeTeam) {
+                homeTeamGoals++;
+                
+            } else {
+                awayTeamGoals++;
+            }
             returnString.append("Goal scored after "
                     + currGame.getTheTime() + " mins by "
                     + currGame.getThePlayer().getPlayerName() + " of "
                     + currGame.getTheTeam().getTeamName() + "\n");
         }
+
+        if (homeTeamGoals == awayTeamGoals) {
+            returnString.append("it's a draw!");
+            homeTeam.incPointsTotal(1);
+            awayTeam.incPointsTotal(1);
+        } else if (homeTeamGoals > awayTeamGoals) {
+            returnString.append(homeTeam.getTeamName() + " win");
+            homeTeam.incPointsTotal(1);
+        } else {
+            returnString.append(awayTeam.getTeamName() + " win");
+            awayTeam.incPointsTotal(1);
+        }
+        returnString.append("(" + homeTeamGoals + " - "
+                + awayTeamGoals + ") \n");
         return returnString.toString();
     }
 

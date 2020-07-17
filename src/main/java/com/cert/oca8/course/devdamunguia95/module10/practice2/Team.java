@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cert.oca8.course.devdamunguia95.module9.practice2;
+package com.cert.oca8.course.devdamunguia95.module10.practice2;
 
 /**
  *
@@ -13,6 +13,8 @@ public class Team {
 
     private String teamName;
     private Player[] playerArray;
+    private int pointsTotal;
+    private int goalsTotal;
 
     public Team() {
     }
@@ -24,6 +26,16 @@ public class Team {
     public Team(String teamName, Player[] playerArray) {
         this(teamName);
         this.playerArray = playerArray;
+    }
+
+    public void incPointsTotal(int pointsTotal) {
+
+        this.pointsTotal += pointsTotal;
+    }
+
+    public void incGoalsTotal(int goal) {
+
+        this.goalsTotal = this.goalsTotal + goal;
     }
 
     /**
@@ -52,5 +64,33 @@ public class Team {
      */
     public void setPlayerArray(Player[] playerArray) {
         this.playerArray = playerArray;
+    }
+
+    /**
+     * @return the pointsTotal
+     */
+    public int getPointsTotal() {
+        return pointsTotal;
+    }
+
+    /**
+     * @param pointsTotal the pointsTotal to set
+     */
+    public void setPointsTotal(int pointsTotal) {
+        this.pointsTotal = pointsTotal;
+    }
+
+    /**
+     * @return the golasTotal
+     */
+    public int getGoalsTotal() {
+        return goalsTotal;
+    }
+
+    /**
+     * @param golasTotal the golasTotal to set
+     */
+    public void setGoalsTotal(int golasTotal) {
+        this.goalsTotal = golasTotal;
     }
 }
