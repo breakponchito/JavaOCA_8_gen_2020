@@ -4,6 +4,7 @@ import com.cert.oca8.course.deveduardodogs.module11.practice1.Player;
 import com.cert.oca8.course.deveduardodogs.module11.practice1.Team;
 
 public abstract class GameEvent {
+
     private Team theTeam;
     private Player thePlayer;
     private double theTime;

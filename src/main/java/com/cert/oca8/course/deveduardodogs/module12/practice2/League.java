@@ -6,6 +6,7 @@ import com.cert.oca8.course.deveduardodogs.module11.practice2.utility.PlayerData
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class League {
@@ -19,11 +20,12 @@ public class League {
         // Create a Game here
         Game[] theGames = theLeague.createGames(theTeams);
 
+        System.out.println(theLeague.getLeagueAnnouncement(theGames));
         for (Game currGame : theGames) {
             currGame.playGame();
             System.out.println(currGame.getDescription());
         }
-        System.out.println(theLeague.getLeagueAnnouncement(theGames));
+        //theLeague.showBestTeam(theTeams);
     }
 
     public Team[] createTeams(String teamNames, int teamSize) {
@@ -52,6 +54,20 @@ public class League {
             }
         }
         return (Game[]) theGames.toArray(new Game[1]);
+    }
+
+    public void showBestTeam (Team[] theTeams) {
+        Arrays.sort(theTeams);
+        Team currBestTeam = theTeams[0];
+        System.out.println("\nTeam Points");
+
+        for (Team currTeam: theTeams) {
+            System.out.println(currTeam.getTeamName() + ":" +
+                    currTeam.getPointsTotal() + ":" + currTeam.getGoalsTotal());
+        }
+
+        System.out.println("Winner of the league is " +
+                currBestTeam.getTeamName());
     }
 
     public String getLeagueAnnouncement(Game[] theGames) {

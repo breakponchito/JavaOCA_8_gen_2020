@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Game {
     private Team homeTeam;
     private Team awayTeam;
-    private GameEvent[] goals;
+    private GameEvent[] gameEvents;
     private LocalDateTime theDateTime;
 
     public Game(Team homeTeam, Team awayTeam,
@@ -24,7 +24,6 @@ public class Game {
         GameEvent currEvent;
         for (int i = 1; i <= 90; i++) {
             if (Math.random() > 0.95) {
-                //System.out.println(i);
                 currEvent = Math.random() > 0.6 ? new Goal() : new Possesion();
                 currEvent.setTheTeam(Math.random() > 0.5 ? homeTeam : awayTeam);
                 currEvent.setThePlayer( currEvent.getTheTeam().
@@ -34,8 +33,8 @@ public class Game {
                 eventList.add(currEvent);
             }
         }
-        this.goals = new GameEvent[eventList.size()];
-        eventList.toArray(goals);
+        this.gameEvents = new Goal[eventList.size()];
+        eventList.toArray(gameEvents);
     }
 
     public String getDescription() {
@@ -49,7 +48,7 @@ public class Game {
                         "Date " +
                         this.theDateTime.format
                                 (DateTimeFormatter.ISO_LOCAL_DATE) + "\n");
-        for (GameEvent currEvent: this.getGoals()) {
+        for (GameEvent currEvent: this.getGameEvents()) {
             if (currEvent.getTheTeam() == homeTeam) {
                 homeTeamGoals ++;
                 homeTeam.incGoalsTotal(1);
@@ -57,7 +56,7 @@ public class Game {
                 awayTeamGoals ++;
                 awayTeam.incGoalsTotal(1);
             }
-            returnString.append(currEvent + " after " +
+            returnString.append( currEvent + " after " +
                     currEvent.getTheTime() + " mins by " +
                     currEvent.getThePlayer().getPlayerName() +
                     " of " + currEvent.getTheTeam().getTeamName() +
@@ -98,12 +97,12 @@ public class Game {
         this.awayTeam = awayTeam;
     }
 
-    public GameEvent[] getGoals() {
-        return goals;
+    public GameEvent[] getGameEvents() {
+        return gameEvents;
     }
 
-    public void setGoals(GameEvent[] goals) {
-        this.goals = goals;
+    public void setGameEvents(GameEvent[] gameEvents) {
+        this.gameEvents = gameEvents;
     }
 
     public LocalDateTime getTheDateTime() {

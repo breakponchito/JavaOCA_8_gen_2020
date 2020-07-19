@@ -19,12 +19,12 @@ public class League {
         // Create a Game here
         Game[] theGames = theLeague.createGames(theTeams);
 
+        System.out.println(theLeague.getLeagueAnnouncement(theGames));
         for (Game currGame : theGames) {
             currGame.playGame();
             System.out.println(currGame.getDescription());
         }
         theLeague.showBestTeam(theTeams);
-        System.out.println(theLeague.getLeagueAnnouncement(theGames));
     }
 
     public Team[] createTeams(String teamNames, int teamSize) {

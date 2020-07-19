@@ -20,13 +20,12 @@ public class League {
         // Create a Game here
         Game[] theGames = theLeague.createGames(theTeams);
 
+        System.out.println(theLeague.getLeagueAnnouncement(theGames));
         for (Game currGame : theGames) {
             currGame.playGame();
             System.out.println(currGame.getDescription());
         }
         theLeague.showBestTeam(theTeams);
-        System.out.println(theLeague.getLeagueAnnouncement(theGames));
-
         theLeague.showBestPlayers(theTeams);
     }
 
@@ -83,7 +82,7 @@ public class League {
 
     public void showBestPlayers(Team[] theTeams) {
         ArrayList<Player> thePlayers = new ArrayList();
-        System.out.println("\n\n Best Playes: ");
+        System.out.println("\n\n Best Players: ");
         for (Team currTeam: theTeams) {
             thePlayers.addAll(Arrays.asList(currTeam.getPlayerArray()));
         }

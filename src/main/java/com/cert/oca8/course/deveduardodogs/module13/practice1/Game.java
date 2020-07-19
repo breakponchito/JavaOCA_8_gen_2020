@@ -1,6 +1,7 @@
 package com.cert.oca8.course.deveduardodogs.module13.practice1;
 
 import com.cert.oca8.course.deveduardodogs.module11.practice1.Team;
+import com.cert.oca8.course.deveduardodogs.module12.practice2.GameEvent;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
