@@ -5,7 +5,6 @@
  */
 package com.cert.oca8.course.devdamunguia95.module11.arrayloopsdates.practice1.soocer;
 import com.cert.oca8.course.devdamunguia95.module11.arrayloopsdates.practice1.utility.PlayerDatabase;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.ArrayList;
